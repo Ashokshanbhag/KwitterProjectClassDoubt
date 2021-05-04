@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Kwitter Message page</title>
+	<title>Kwitter Room</title>
 <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
 <script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
@@ -13,11 +13,11 @@
 <link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet"><meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <link rel="stylesheet" type="text/css" href="style.css">
+
 </head>
 <body>
-
 <div class="container">
-	<button id="logout" class="glyphicon glyphicon-log-out btn btn-danger" onclick="logOut2()">Logout</button>
+ <button id="logout" class="glyphicon glyphicon-log-out btn btn-danger" onclick= "logOut()">Logout</button>
 	<center>
 		<h1 class="header">	
 			Kwitter	
@@ -25,20 +25,23 @@
 				<img src="m2.png">
 			</sup>
 		</h1>
-		<div style="text-align: left;margin-bottom: 70px;" id="output"> </div>
-	</center>
-</div>
+		<h3 id = "username" class="color_white"></h3>
+		<div class="form-group input_div_room_page">
+			<label>#Add Room:</label>
 
-<center>
-	<div class="input_div_message_page">
+			<input type ="text" id="room_name" class="form-control" placeholder = "Enter Room Here">
 
-		<label>Send:</label>
-		<input id="message" placeholder="Type Message Here" type="text" class="form-control" style="width: 200px; height: 50px;">
-		<button class="btn btn-success" onclick="send();">Send</button>
+		</div>
+		<button class="btn btn-success" onclick="addRoom()">#Add Room</button>
+		<h3 class="color_white">#TRENDINGROOMS</h3>
+
+		<div id="output"></div>
 
 	</div>
-</center>
+	
+	</center>
 
-<script src="kwitter_page.js"></script>
+<script src="kwitter_room.js"></script>
+
 </body>
 </html>
